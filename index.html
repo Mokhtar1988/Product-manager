@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="prog">
+      <div class="header">
+        <h1>Testing</h1>
+      </div>
+      <!-- the inputs -->
+      <div class="inputs">
+        <input type="text" id="product" placeholder="Product*" />
+        <!-- prices -->
+        <div class="prices">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="price"
+            placeholder="Price*"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="tax"
+            placeholder="Fees And Taxes"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="Count" />
+        <input type="text" id="cati" placeholder="Category" />
+        <button id="submit">Create</button>
+      </div>
+      <!-- ends here -->
+      <div class="outputs">
+        <input
+          id="search"
+          onkeyup="searchData(this.value)"
+          type="text"
+          placeholder="Search"
+        />
+        <div class="searchbtn">
+          <button onclick="getSearchMode(this.id)" id="searchpro">
+            Search By Product
+          </button>
+          <button onclick="getSearchMode(this.id)" id="searchcat">
+            Search By Category
+          </button>
+        </div>
+      </div>
+      <div id="deleteAll"></div>
+      <table>
+        <tr>
+          <th class="th">Id</th>
+          <th class="th">Product</th>
+          <th class="th">Price</th>
+          <th class="th">Fees</th>
+          <th class="th">Total</th>
+          <th class="th">Category</th>
+          <th class="th">Update</th>
+          <th class="th">Delete</th>
+        </tr>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
